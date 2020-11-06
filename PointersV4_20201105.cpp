@@ -5,22 +5,8 @@
 
 int main()
 {
-	int b[2][3] = { 2,3,6,4,5,8 };
-	int(*p)[3] = b;
-	printf("The address of first element %p\n", p);//400
-	printf("The value of first element: %d\n", b[0][0]);//2
-	printf("The value of first element: %d\n", *(*p));//2
-	printf("The value of second element: %d\n", *(*p+1));//3
-	//(*p+1) is the address and *(*p+1) is the value at this address
-	printf("The value of fourth element: %d\n", *(*(p + 1)));//4 b[1][0]
-	printf("The value of the fifth element: %d\n", *(*(p + 1) + 1));//5 b[1][1]
-	printf("Size of pointer: %d\n", sizeof(p));//4
-	printf("The address of the second element %p\n", p + 1); //412
-	printf("The value of second element %d\n", b[1][0]);//4
-	printf("Validating the three sam eexpressions: b[i][j]=\n");
-	printf("%d\n", b[1][1]); //5
-	printf("%d\n", *(b[1]+1)); //5
-	printf("%d\n", *(*(b+1)+1)); //5
+	int b[3][2][2] = { 2,3,6,4,5,8 };
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
