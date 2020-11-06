@@ -13,9 +13,9 @@ int main()
 	printf("The address of first element is %p\n", c1);	//800
 	printf("The address of the first element in array is %p\n", *p);	//800
 	printf("The value of the first element in array is %d\n", *(*p[0]));	//1
-	printf("The value of the first element in the second array is %d\n", *(*p[1]));	//5
-	printf("The addres of the first element in the second array is %p\n", *p[1]);	//816
-	printf("The value of the first element in the third array is %d\n", *(*p[2]));	//9
+	printf("The value of the second element in the first array is %d\n", *(*p[1]));	//5
+	printf("The addres of the second element in the first array is %p\n", *p[1]);	//816
+	printf("The value of the third element in the first array is %d\n", *(*p[2]));	//9
 	printf("The value of the second element in array is %d\n", *(p[0][0]+1));	//2,	+ is pointer arithmetic
 	printf("The value of the third element in array is %d\n", *(*(p[0]+1)));	//3
 	printf("The value of the fourth element in array is %d\n", *(*(p[0] + 1)+1));	//4
