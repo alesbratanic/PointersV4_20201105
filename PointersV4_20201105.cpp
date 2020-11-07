@@ -2,20 +2,37 @@
 //
 
 #include <stdio.h>
+//except the first dimension all other dimensions will be enforced
+void Func(int(*A)[2][2]) {  //Argument: 3D array of integers
+    //We are only passing the reference of the array to the function
+}
+void Func2(int(*A)[3]) {   //Argument: 2D Array of integers, only the first dimension can be left empty, other diemension must be specified
+
+}
+//or
+void Func21(int A[][3]) {
+
+}
+void Func3(int(*A)) {   //Argument: 1D array of integers
+
+}
+//or
+void Func31(int A[]) {
+
+}
 
 int main()
 {
-    int a[5] = { 2,4,6,8,10 };
-    int* p = a;
-    int i = 0;
-    int sizeArray = sizeof(a)/sizeof(a[0]);
-    printf("Size of a is: %d\n",sizeArray);
-    printf("Value of a is %d\n", *a);
-    printf("Value of a is %d\n", a[1]);
-    for (i = 0; i < sizeArray;i++) {
-        printf("%d\n",*p);
-        p++;
-    }
+    int c1[3][2][2] = { {{3,2},{4,1}},
+        {{11,23},{14,12}},
+        {{25,28},{14,19}} };
+    int c2[2][3] = { {3,2,4},{4,1,6} }; //c3 return int(*)[3] (c3 return a pointer of 3 integers
+    int c3[3] = { 12,5,7 }; //c3 return a pointers of integer
+    Func(c1);
+    Func2(c2);
+    Func21(c2);
+    Func3(c3);
+    Func31(c3);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
